@@ -17,6 +17,7 @@
     align-items: center;
     justify-content: space-between;
     padding-right: 4rem;
+    background-color: grey;
 }
 
 .header{
@@ -38,12 +39,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #333;
+       
         padding: 15px;
         color: white;
     }
-    
-    
     
     .hamburger-menu {
         position: relative;
@@ -84,10 +83,12 @@
         text-decoration: none;
         padding: 10px;
         transition: background-color 0.3s;
+        
     }
     
     .menu a:hover {
         background-color: #555;
+       
     }
     
     #menu-toggle:checked + .menu-icon .bar {
