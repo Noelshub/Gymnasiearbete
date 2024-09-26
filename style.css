@@ -30,10 +30,9 @@ body {
     margin: auto;
   }
   
-  .logo {
-    color: var(--secondary-bgColor);
-    font-size: 24px;
-    font-weight: bold;
+  .bild {
+    width: 50%;
+    height: 30%;
   }
   
   .nav-links {
@@ -89,11 +88,22 @@ body {
     .hamburger {
       display: flex;
     }
+    .bild {
+      width: 20%;
+      height: 20%;
+    }
+    picture{
+      width: 40%;
+      height: 40%;
+    }
   }
   
 
-@media only screen and (max-width: 600px) {
-   
+@media only screen and (min-width: 769px) {
+  .bild {
+    width: 20%;
+    height: 20%;
+  }
     
     
   }
