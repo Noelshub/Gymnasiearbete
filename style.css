@@ -33,9 +33,13 @@ header {
   display: none;
 }
 
+#logoimg{
+  width: 30%; 
+}
+
 .bild {
   width: 50%;
-  height: 30%;
+  height: 20%;
 }
 
 .nav-links {
@@ -253,11 +257,6 @@ header {
   margin-top: 10px;
   font-size: 1em;
 }
-#popcategories{
-  
-}
-
-
 
 /* Footer styling */
 .footer {
@@ -333,3 +332,38 @@ header {
   margin: 0;
 }
 
+
+
+/* Product detail page styles */
+.product-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.product-detail-img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+  background-color: var(--font-Color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--font-Color);
+  transition: background-color 0.3s ease;
+}
+
+.product-detail p{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
