@@ -5,31 +5,74 @@ function toggleMenu() {
 
 
 
-  // script.js
 
-// Exempel på dynamisk produktdata
-const product = {
-  name: "Straps",
-  image: "Bilder/nedladdning (1).jpg",
-  price: "199 kr",
-  description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, quasi. Nulla adipisci ipsum sint cumque ea dolorem, dolore eius voluptatem quia?"
-};
 
-// Funktion för att ladda produktinformation
-function loadProductDetails(product) {
-  document.getElementById("product-name").textContent = product.name;
-  document.getElementById("product-image").src = product.image;
-  document.getElementById("product-image").alt = product.name;
-  document.getElementById("product-price").textContent = `Pris: ${product.price}`;
-  document.getElementById("product-description").textContent = product.description;
-}
-
-// Lägg till i varukorg-funktion
-document.getElementById("add-to-cart-btn").addEventListener("click", () => {
-  alert(`${product.name} har lagts till i din varukorg!`);
-});
-
-// Ladda produkten vid sidans start
-window.onload = () => {
-  loadProductDetails(product);
-};
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dots = document.querySelectorAll(".dot");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+  
+    let currentIndex = 0;
+    let autoplayInterval;
+  
+    // Update the carousel to show the active slide
+    function updateCarousel() {
+      const carouselContainer = document.querySelector(".carousel-container");
+      carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentIndex);
+      });
+    }
+  
+    // Move to the next slide
+    function goToNextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }
+  
+    // Move to the previous slide
+    function goToPrevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+  
+    // Start autoplay
+    function startAutoplay() {
+      autoplayInterval = setInterval(goToNextSlide, 3000); // Change slide every 5 seconds
+    }
+  
+    // Stop autoplay
+    function stopAutoplay() {
+      clearInterval(autoplayInterval);
+    }
+  
+    // Event listeners for navigation
+    nextBtn.addEventListener("click", () => {
+      stopAutoplay(); // Pause autoplay when manually navigating
+      goToNextSlide();
+      startAutoplay(); // Resume autoplay
+    });
+  
+    prevBtn.addEventListener("click", () => {
+      stopAutoplay();
+      goToPrevSlide();
+      startAutoplay();
+    });
+  
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        stopAutoplay();
+        currentIndex = index;
+        updateCarousel();
+        startAutoplay();
+      });
+    });
+  
+    // Initialize carousel
+    updateCarousel();
+    startAutoplay();
+  });
+  

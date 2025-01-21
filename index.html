@@ -9,9 +9,12 @@
   <body>
     <header>
       <nav class="navbar">
-        
-        <img src="Bilder/fitnation-high-resolution-logo-black-transparent.png" alt="Logo Fitnation" class="bild"/>
-        
+        <img
+          src="Bilder/fitnation-high-resolution-logo-black-transparent.png"
+          alt="Logo Fitnation"
+          class="bild"
+        />
+
         <input type="text" placeholder="search..." class="search-input" />
         <div class="hamburger" onclick="toggleMenu()">
           <span class="bar"></span>
@@ -20,108 +23,137 @@
         </div>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <ul class="desktop-options">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a>Contact</a></li>
-    </ul>
-    <div class="rectangle">
-      <img src="Bilder/fitnation-high-resolution-logo.png" alt="bild" />
-    </div>
-    <section class="product-grid">
-      <div class="product-item">
-        <a href="description.html">
-        <img src="product1.jpg" alt="Product 1" />
-        <h2>Produkt</h2>
-        <p>300kr</p>
-      </a>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to LiftNation</h1>
+        <p>
+          Your one-stop shop for high-quality gym equipment and accessories!
+        </p>
+        <a href="#products" class="cta-button">Shop Now</a>
       </div>
-      <div class="product-item">
-        <img src="product2.jpg" alt="Product 2" />
-        <h2>Produkt</h2>
-        <p>500kr</p>
+    </section>
+    <section class="carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img src="product1.jpg" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$49.99</p>
+        </div>
+        <div class="carousel-slide">
+          <img src="product2.jpg" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$59.99</p>
+        </div>
+        <div class="carousel-slide">
+          <img src="product3.jpg" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>$39.99</p>
+        </div>
+        <div class="carousel-slide">
+          <img src="product4.jpg" alt="Product 4" />
+          <h3>Product 4</h3>
+          <p>$29.99</p>
+        </div>
       </div>
-      <div class="product-item">
-        <img src="product3.jpg" alt="Product 3" />
-        <h2>produkt</h2>
-        <p>400kr</p>
-      </div>
-      <div class="product-item">
-        <img src="product4.jpg" alt="Product 4" />
-        <h2>Produkt</h2>
-        <p>200kr</p>
-      </div>
-      <div class="product-item" id="hide">
-        <img src="product4.jpg" alt="Product 4" />
-        <h2>Produkt</h2>
-        <p>400kr</p>
+
+      <!-- Navigation Buttons -->
+      <button class="carousel-btn prev-btn">&lt;</button>
+      <button class="carousel-btn next-btn">&gt;</button>
+
+      <!-- Dots -->
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
     </section>
 
-    <div class="rectangle">
-      <img src="Bilder/fitnation-high-resolution-logo.png" alt="bild" />
-    </div>
-    <section class="product-grid">
-      <div class="product-item">
-        <img src="product1.jpg" alt="Product 1" />
-        <h2>Produkt</h2>
-        <p>300kr</p>
-      </div>
-      <div class="product-item">
-        <img src="product1.jpg" alt="Product 1" />
-        <h2>Produkt</h2>
-        <p>300kr</p>
+    <section id="products" class="products-section">
+      <div class="product-grid">
+        <div class="product-item large">
+          <img
+            src="Bilder/Simpson_Fitness_2-_003_large_14e236e0-671d-4862-961e-c29e4cdf4e91_600x.webp"
+            alt="Product 1"
+          />
+          <h3>Dumbbells</h3>
+          <p>Perfect for building strength.</p>
+          <p class="price">$50</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-item large">
+          <img src="bilder/treadmill.avif" alt="Product 2" />
+          <h3>Treadmill</h3>
+          <p>Stay fit at home with ease.</p>
+          <p class="price">$500</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-item large">
+          <img src="Bilder/kettlebells.avif" alt="Product 3" />
+          <h3>Kettlebells</h3>
+          <p>Enhance your strength training.</p>
+          <p class="price">$70</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-item wide">
+          <img src="bilder/bench press.webp" alt="Product 4" />
+          <h3>Bench Press</h3>
+          <p>Train like a pro.</p>
+          <p class="price">$250</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-item wide">
+          <img src="Bilder/yoga matta.jpg!w700wp" alt="Product 5" />
+          <h3>Yoga Mat</h3>
+          <p>Comfortable and durable.</p>
+          <p class="price">$20</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-item wide">
+          <img src="bilder/squat rack.avif" alt="Product 4" />
+          <h3>Squat Rack</h3>
+          <p>Train like a pro.</p>
+          <p class="price">$250</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
     </section>
-    <div class="rectangle">
-      <img src="Bilder/fitnation-high-resolution-logo.png" alt="bild" />
-    </div>
     <section class="popular-categories">
-      <h2>Populära Kategorier</h2 id="popcategories">
+      <h2>Popular Categories</h2>
       <div class="categories-grid">
         <div class="category-item">
-          <img src="/Bilder/fitnation-high-resolution-logo-black-transparent.png" alt="Kategori 1" />
-          <h3>Kategori 1</h3>
+          <img src="category1.jpg" alt="Category 1" />
+          <h3>Category 1</h3>
         </div>
         <div class="category-item">
-          <img src="Bilder/fitnation-high-resolution-logo-transparent.png" alt="Kategori 2" />
-          <h3>Kategori 2</h3>
+          <img src="category2.jpg" alt="Category 2" />
+          <h3>Category 2</h3>
         </div>
         <div class="category-item">
-          <img src="Bilder/fitnation-high-resolution-logo-black-transparent.png" alt="Kategori 3" />
-          <h3>Kategori 3</h3>
+          <img src="category3.jpg" alt="Category 3" />
+          <h3>Category 3</h3>
         </div>
         <div class="category-item">
-          <img src="Bilder/fitnation-high-resolution-logo-black-transparent.png" alt="Kategori 4" />
-          <h3>Kategori 4</h3>
-        </div>
-        <div class="category-item">
-          <img src="Bilder/fitnation-high-resolution-logo-black-transparent.png" alt="Kategori 5" />
-          <h3>Kategori 5</h3>
-        </div>
-        <div class="category-item">
-          <img src="Bilder/fitnation-high-resolution-logo-black-transparent.png" alt="Kategori 6" />
-          <h3>Kategori 6</h3>
+          <img src="category4.jpg" alt="Category 4" />
+          <h3>Category 4</h3>
         </div>
       </div>
     </section>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3>Om oss</h3>
-          <p>Vi är ett fitnessvarumärke som har åtagit sig att främja en hälsosam livsstil genom produkter och tjänster av högsta kvalitet.</p>
+          <p>
+            Vi är ett fitnessvarumärke som har åtagit sig att främja en hälsosam
+            livsstil genom produkter och tjänster av högsta kvalitet.
+          </p>
         </div>
         <div class="footer-column">
           <h3>Quick Links</h3>
